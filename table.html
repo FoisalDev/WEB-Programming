@@ -48,8 +48,7 @@
     </tbody>
 
     </table>
-</body>
-</html>
+
 
 
 <hr>
@@ -195,3 +194,63 @@
 
     </tbody>
 </table>
+
+<h2>Student Registration Form</h2>
+
+    <form action="#" method="post">
+        <!-- Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="fullname" placeholder="Enter your full name" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" required>
+        <br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <!-- Skills (Checkbox) -->
+        <label>Skills:</label>
+        <input type="checkbox" name="skills" value="html"> HTML
+        <input type="checkbox" name="skills" value="css"> CSS
+        <input type="checkbox" name="skills" value="js"> JavaScript
+        <input type="checkbox" name="skills" value="python"> Python
+        <br><br>
+
+        <!-- Department (Dropdown) -->
+        <label for="dept">Department:</label>
+        <select id="dept" name="department">
+            <option value="cse">CSE</option>
+            <option value="eee">EEE</option>
+            <option value="bba">BBA</option>
+            <option value="eng">English</option>
+        </select>
+        <br><br>
+
+        <!-- Upload File -->
+        <label for="cv">Upload CV:</label>
+        <input type="file" id="cv" name="cvfile">
+        <br><br>
+
+        <!-- Message (Textarea) -->
+        <label for="msg">Message:</label><br>
+        <textarea id="msg" name="message" rows="5" cols="40" placeholder="Write something..."></textarea>
+        <br><br>
+
+        <!-- Submit & Reset -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>
