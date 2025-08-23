@@ -6,4 +6,6 @@
     border: 5px solid red;
     border-radius: 20%;
     box-shadow: 2px 3px 3px 2px;
+    text-align: center;
+    background-image: linear-gradient(yellow,orange,gold);
 }
