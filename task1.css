@@ -27,6 +27,7 @@
 #left{
     background-color: red;
     width: 20vw;
+    text-decoration: underline;
 }
 #right{
     background-color: aqua;
