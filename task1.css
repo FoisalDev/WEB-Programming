@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#parent{
+    display: grid;
+}
+
+#header{
+    background-color: gold;
+    height: 10vh;
+    width: 100vw;
+}
+
+#footer{
+    background-color: greenyellow;
+    height: 10vh;
+    width: 100vh;
+}
+
+#leftright{
+    display: flex;
+    height: 60vh;
+    width: 1000vh;
+}
+
