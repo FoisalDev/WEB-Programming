@@ -5,6 +5,7 @@
 #parent{
     display: grid;
     text-align: center;
+    text-decoration: solid;
 }
 
 #header{
