@@ -1,10 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    border: 1px solid black;
+    text-align: center;
 }
 #parent{
     display: grid;
-    text-align: center;
 }
 #head{
     background-color: rgb(255, 221, 1);
@@ -23,4 +24,9 @@
 #right{
     background-color: chartreuse;
     width: 70vw;
+}
+#footer{
+    height: 10vh;
+    width: 100vh;
+    background-color: aquamarine;
 }
