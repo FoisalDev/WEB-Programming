@@ -7,10 +7,20 @@
     text-align: center;
 }
 #head{
-    background-color: chocolate;
+    background-color: rgb(255, 221, 1);
     height: 10vh;
-    width: 100vh;
+    width: 100vw;
 }
 #left_right{
     display: flex;
+    height: 80vh;
+    width: 100vw;
+}
+#left{
+    background-color: rgb(224, 72, 38);
+    width: 30vw;  
+}
+#right{
+    background-color: chartreuse;
+    width: 70vw;
 }
