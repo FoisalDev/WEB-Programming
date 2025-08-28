@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#parent{
+    display: grid;
+    text-align: center;
+}
+#head{
+    background-color: chocolate;
+
+}
