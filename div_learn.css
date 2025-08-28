@@ -8,5 +8,9 @@
 }
 #head{
     background-color: chocolate;
-
+    height: 10vh;
+    width: 100vh;
+}
+#left_right{
+    display: flex;
 }
