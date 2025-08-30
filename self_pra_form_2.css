@@ -1,0 +1,10 @@
+#btn{
+    color: rgb(255, 255, 255);
+    height: 100px;
+    width: 200px;
+    border-radius: 5%;
+    font-size: 15px;
+    background-image: url("image/btn_lab_4.jpeg");
+    box-shadow: 5px 3px 3px 5px;
+
+}
