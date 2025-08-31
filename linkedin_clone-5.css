@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#navbar {
+  width: 100vw;
+  height: 15vh;
+  background-color: aquamarine;
+}
+#left {
+  width: 50vw;
+  height: 85vh;
+  background-color: red;
+}
+#right {
+  width: 50vw;
+  height: 85vh;
+  background-image: url("linkedin.svg");
+  background-repeat: no-repeat;
+  background-position: 30px 25px;
+}
+#parent_left_right {
+  display: flex;
+}
+
+/* nav */
+#navbar {
+  display: flex;
+}
+#logo {
+  height: 15vh;
+  width: 10vw;
+}
