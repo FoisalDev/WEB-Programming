@@ -38,7 +38,7 @@
 
 #main_div{
    background-color: #FFFFFF;
-   height: 320px;
+   height: 340px;
    width: 400px;
    border-radius: 8px;
    box-shadow: 2px 3px 10px 1px;
@@ -76,6 +76,7 @@
 
 #forgot{
     text-align: center;   
+    padding-top: 15px;
 }
 a{
     text-decoration: none;
@@ -84,7 +85,9 @@ a{
 }
 hr{
     border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
 }
+
 #create_btn{
     height: 50px;
     width: 200px;
