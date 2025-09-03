@@ -8,10 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F1F4F7;
     
 }
 #left{
-    background-color: yellow;
+    /* background-color: yellow; */
     height: 550px;  
     width: 540px;
     margin-right: 50px;
@@ -33,5 +34,53 @@
 #fb_bottom{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
+}
 
+#main_div{
+   background-color: #FFFFFF;
+   height: 350px;
+   width: 400px;
+   border-radius: 8px;
+   box-shadow: 2px 3px 10px 1px;
+}
+
+#right{
+    display: flex;
+    
+}
+.txt1{
+    height: 50px;
+    width: 350px;
+    border: 1px solid #DADDE1;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+  
+}
+#btn_login{
+    height: 50px;
+    width: 364px;
+    border-radius: 8px;
+    background-color: #0765FF;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 15px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#forgot{
+    text-align: center;   
+}
+a{
+    text-decoration: none;
+    color: #0765FF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
