@@ -6,7 +6,7 @@
 #left {
   width: 50vw;
   height: 90vh;
-  background-color: red;
+  /* background-color: red; */
 }
 #right {
   width: 50vw;
@@ -18,7 +18,7 @@
 #parent_left_right {
   display: flex;
   height: 90vh;
- width: 100vw;
+  width: 100vw;
 }
 
 #navbar {
@@ -30,79 +30,90 @@
 }
 
 #logo {
- height: 100px;
- width: 100px;
- /* background-color: yellow; */
- align-items: center;
+  height: 100px;
+  width: 100px;
+  /* background-color: yellow; */
+  align-items: center;
 }
-img{
-  height:80px; 
+img {
+  height: 80px;
   width: 80px;
 }
 
-#components{
+#components {
   display: flex;
   align-items: center;
   /* background-color: aqua; */
 }
-.nav_component{
+.nav_component {
   margin-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: gray;
 }
 
-#button{
+#button {
   /* background-color: chartreuse; */
   /* margin-right: 120px; */
   align-items: center;
 }
-.all_btn{
-  color:#0c6ed0 ;
-   font-size: 18px;
-   margin-left: 20px;
-   background-color: white;
-   border-radius: 20px;
-   padding: 6px;
-   border: 2px solid #0c6ed0;
+.all_btn {
+  color: #0c6ed0;
+  font-size: 18px;
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 6px;
+  border: 2px solid #0c6ed0;
 }
 
-#hero_content{
+#hero_content {
   margin-left: 180px;
-  margin-top: 35px; 
+  margin-top: 35px;
 }
 
-#hero_start{
+#hero_start {
   font-size: 48px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #52696D; 
+  color: #52696d;
 }
-.btn{
+.btn {
   height: 40px;
   width: 460px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   border-radius: 20px;
   border: 1px solid black;
-  font-weight:500;
+  font-weight: 500;
   margin-top: 15px;
 }
-#sign_google{
+#sign_google {
   background-color: #0c6ed0;
   color: white;
   border: none;
 }
 
-#hero_middle{
-  font-size: 14px;
-  color: #52696D;
+#hero_middle {
+  font-size: 12px;
+  color: #52696d;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 25px;
   padding-left: 0px;
 }
-a{
+a {
   color: #0c6ed0;
   text-decoration: none;
+  font-size: 13px;
 }
 
+#hero_end{
+  font-size: 14px;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 150px;
 
+}
+#join{
+  font-size: 20px;
+}
