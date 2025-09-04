@@ -83,14 +83,26 @@ img{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   border-radius: 20px;
-  border: 0.5px solid black;
-  font-weight:400;
+  border: 1px solid black;
+  font-weight:500;
   margin-top: 15px;
 }
 #sign_google{
   background-color: #0c6ed0;
   color: white;
   border: none;
+}
+
+#hero_middle{
+  font-size: 14px;
+  color: #52696D;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 25px;
+  padding-left: 0px;
+}
+a{
+  color: #0c6ed0;
+  text-decoration: none;
 }
 
 
