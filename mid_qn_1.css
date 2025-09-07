@@ -27,6 +27,7 @@
 #signupbtn {
   color: white;
   background-color: #ff4419;
+  width: 80px;
 }
 #nav_1 {
   display: flex;
@@ -102,19 +103,19 @@
   padding-top: 90px;
 }
 
-#footer{
-    text-align: center;
-    justify-content: center;
-    color: black;
+#footer {
+  text-align: center;
+  justify-content: center;
+  color: black;
 }
-#foot_1{
- padding-top: 40px;
+#foot_1 {
+  padding-top: 40px;
 }
-#foot_2{
-    padding-top: 20px;
-    
+#foot_2 {
+  padding-top: 20px;
+  font-size: 18px;
 }
-#foot_3{
-    padding-top: 20px;
-    color: #1d78f0;
+#foot_3 {
+  padding-top: 20px;
+  color: #1d78f0;
 }
