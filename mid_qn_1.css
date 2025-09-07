@@ -7,11 +7,10 @@
 }
 #hero {
   height: 65vh;
-  background-color: rgb(179, 179, 163);
+  background-color: rgb(230, 230, 217);
 }
 #footer {
-  height: 25vh;
-  background-color: brown;
+  height: 20vh;
 }
 #nav_logo {
   font-size: 25px;
@@ -103,3 +102,19 @@
   padding-top: 90px;
 }
 
+#footer{
+    text-align: center;
+    justify-content: center;
+    color: black;
+}
+#foot_1{
+ padding-top: 40px;
+}
+#foot_2{
+    padding-top: 20px;
+    
+}
+#foot_3{
+    padding-top: 20px;
+    color: #1d78f0;
+}
