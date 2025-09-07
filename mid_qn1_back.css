@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    height: 10vh;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#mid_sec{
+    height: 90vh;
+    background-color:aquamarine;
+    display: flex;
+
+}
+#left{
+    width: 40%;
+    background-color: red;
+}
+#right{
+    width: 60%;
+    background-color:chartreuse;
+}
+#nav_btn{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content:flex-end;
+    margin-right: 20px;
+}
+.btn{
+    border: none;
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    height: 40px;
+    width: 60px;
+}
+#free_trail{
+    height: 40px;
+    width: 180px;
+    background-color: #0976a7;
+    border-radius: 5px;
+    color: white;
+}
+#logo{
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 35px;
+}
