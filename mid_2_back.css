@@ -2,49 +2,50 @@
   margin: 0;
   padding: 0;
 }
-#navbar{
-    height: 8vh;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    width: 80vw;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    z-index: 100;
-    margin-top: 5px;
-    margin-left: 130px;
+#navbar {
+  height: 8vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  margin-top: 5px;
+  margin-left: 130px;
+}
+#logo {
+  color: orange;
+  padding-left: 100px;
+}
+#button {
+  display: flex;
+  gap: 40px;
+  padding-right: 70px;
+}
+.btn {
+  color: white;
+  border: none;
+  background-color: black;
+}
 
+/* nav done */
+#page {
+  border: none;
+  color: white;
+  background-color: black;
 }
-#logo{
-    color: orange;
-    padding-left: 100px; 
-}
-#button{
-    display: flex;
-    gap: 40px;
-    padding-right: 70px;
-}
-.btn{
-    color:white ;
-    border: none;
-    background-color: black;
-}
-#page{
-    border: none;
-    color: white;
-    background-color: black;
-}
-#btn_book{
-    background-color: orange;
-    color: white;
-    height: 8vh;
-    width: 130px;
-
+#btn_book {
+  background-color: orange;
+  color: white;
+  height: 8vh;
+  width: 130px;
 }
 
 #hero {
   height: 100vh;
   background-color: aquamarine;
+  position: relative;
 }
 #hero_1 {
   height: 35vh;
@@ -62,4 +63,34 @@
 #right {
   width: 50vw;
   background-color: red;
+}
+
+#learn {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+  position: absolute;
+  z-index: 3000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 48.5%;
+  top: 50%;
+}
+#attribute {
+  font-weight: bolder;
+  color: white;
+}
+#pearn {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 48.5%;
+  top: 80%;
 }
