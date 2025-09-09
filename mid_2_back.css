@@ -4,10 +4,43 @@
 }
 #navbar{
     height: 8vh;
-    background-color: chartreuse;
+    background-color: rgb(0, 0, 0);
     display: flex;
-}
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    margin-top: 5px;
+    margin-left: 130px;
 
+}
+#logo{
+    color: orange;
+    padding-left: 100px; 
+}
+#button{
+    display: flex;
+    gap: 40px;
+    padding-right: 70px;
+}
+.btn{
+    color:white ;
+    border: none;
+    background-color: black;
+}
+#page{
+    border: none;
+    color: white;
+    background-color: black;
+}
+#btn_book{
+    background-color: orange;
+    color: white;
+    height: 8vh;
+    width: 130px;
+
+}
 
 #hero {
   height: 100vh;
