@@ -63,6 +63,12 @@
 #right {
   width: 50vw;
   background-color: red;
+  background-image: url("image/1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+  
 }
 
 #learn {
@@ -92,5 +98,35 @@
   align-items: center;
   position: absolute;
   left: 48.5%;
-  top: 80%;
+  top: 60%;
+}
+
+#footer{
+    height: 10vh;
+    width: 80vw;
+    border-radius: 5px;
+    display: flex;
+    background-color: aquamarine;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 4000;
+    top: 86%;
+    left: 9%;
+    padding-top: 15px;
+}
+
+.foot_element{
+    height: 50px;
+    border: none;
+    width: 280px;
+    border-radius: 5px;
+}
+#foot_btn{
+    height: 50px;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
 }
