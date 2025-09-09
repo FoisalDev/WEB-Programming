@@ -130,3 +130,47 @@
     background-color: darkblue;
     color: white;
 }
+
+#box{
+    display: flex;
+   flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    width: 150px;
+    border-radius: 3px;
+
+}
+#icon{
+   height: 40%;
+   width: 100%;
+   font-weight: bolder;
+   /* background-color: aquamarine; */
+   color: orange;
+   align-items: center;
+   text-align: center;
+   padding-top: 30px;
+}
+#title{
+    height: 20%;
+    width: 100%;
+    /* background-color: rgb(255, 127, 174); */
+    align-items: center;
+   text-align: center;
+   padding-right: 50px;
+}
+#details{
+    height: 40%;
+    width: 100%;
+    /* background-color: orange; */
+    align-items: center;
+   text-align: center;
+   color: grey;
+}
+#hero_1{
+    display: flex;
+    gap: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
