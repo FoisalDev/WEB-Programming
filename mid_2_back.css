@@ -1,4 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+}
+#navbar{
+    height: 8vh;
+    background-color: chartreuse;
+    display: flex;
+}
+
+
+#hero {
+  height: 100vh;
+  background-color: aquamarine;
+}
+#hero_1 {
+  height: 35vh;
+  background-color: antiquewhite;
+}
+#hero_2 {
+  height: 65vh;
+  background-color: chocolate;
+  display: flex;
+}
+#left {
+  width: 50vw;
+  background-color: darkseagreen;
+}
+#right {
+  width: 50vw;
+  background-color: red;
 }
