@@ -44,21 +44,17 @@
 
 #hero {
   height: 100vh;
-  background-color: aquamarine;
+  background-color: rgb(218, 226, 224);
   position: relative;
 }
 #hero_1 {
   height: 35vh;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 #hero_2 {
   height: 65vh;
-  background-color: chocolate;
+  /* background-color: chocolate; */
   display: flex;
-}
-#left {
-  width: 50vw;
-  background-color: darkseagreen;
 }
 #right {
   width: 50vw;
@@ -111,7 +107,7 @@
     justify-content: space-evenly;
     position: absolute;
     z-index: 4000;
-    top: 86%;
+    top: 96%;
     left: 9%;
     padding-top: 15px;
 }
@@ -174,3 +170,64 @@
     justify-content: space-evenly;
     padding-top: 100px;
 }
+#left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+#left1 {
+    width: 50vw;
+    /* background-color: rgb(0, 255, 0); */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  #left2{
+    width: 50vw;
+    /* background-color: rgb(212, 0, 255); */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  #l1{
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: url("image/btn_lab_4.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+
+  }
+  #l2{
+    height: 160px;
+    width: 160px;
+    background-color: aquamarine;
+    margin-top: 40px;
+    background-image: url("image/btn_lab_4.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+  }
+  #l3{
+    height: 160px;
+    width: 160px;
+    background-color: blue;
+    margin-left: 80px;
+    background-image: url("image/btn_lab_4.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+  }
+  #l4{
+    height: 200px;
+    width: 200px;
+    background-color:yellow;
+    background-image: url("image/btn_lab_4.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+  }
+ 
