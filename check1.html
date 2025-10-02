@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snort FTP Alert</title>
+    <title>Snort Ping Alert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Base Styling to match classic UI */
+        /* Mimicking the provided classic UI look */
         body {
             font-family: Arial, Helvetica, sans-serif; 
             background-color: #f0f0f0; /* Light grey background */
@@ -15,7 +15,7 @@
             border: 1px solid #ccc;
             box-shadow: none; /* Removing drop shadow for cleaner look */
         }
-        /* Page Header - For 'Alert Log View Filter (LAN)' */
+        /* Page Header */
         .page-header {
             background-color: #e5e5e5;
             color: #444;
@@ -24,157 +24,98 @@
             padding: 8px 16px;
             border-bottom: 1px solid #ccc;
         }
-        /* Dark Header Bar for Log Entries - Matching the reference image */
-        .log-header-bar {
-            background-color: #333; /* Dark background */
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 6px 16px;
-            border-bottom: 1px solid #000;
-        }
-        /* Table Structure and Headers */
-        .alert-table {
-            border-collapse: collapse;
-            border-spacing: 0;
-            width: 100%;
-        }
+        /* Table Headers */
         .table-header {
-            background-color: #f0f0f0; /* Lighter grey header background */
-            border-top: none; 
+            background-color: #f5f5f5; /* Very light header background */
+            border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
         }
-        /* Column Header Text Style - Adjusted for exact sizing/weight */
-        .col-header {
-            font-size: 12px; 
-            font-weight: bold; 
-            color: #333;
-            padding: 8px 10px; 
-            text-align: left;
-            text-transform: capitalize;
-        }
-        /* Table Cell Style */
-        .table-cell {
-            padding: 6px 10px;
-            font-size: 12px;
-            color: #222;
-        }
-        /* Alert Row Styles */
+        /* Alert Row Styling */
         .alert-row-custom {
-            background-color: #f8d7da; /* Subtle danger red alert background */
-            border-bottom: 1px solid #eee;
+            background-color: #fff8e1; /* Light warning background for custom alert */
+            font-weight: 500;
         }
         .alert-row-default {
             background-color: #ffffff; /* White background for default traffic */
-            border-bottom: 1px solid #eee;
+            color: #555;
         }
-        /* Action Icon Styles (Zoom/Plus/X) */
-        .action-icons {
-            display: inline-flex;
-            gap: 4px;
-            color: #666;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 1;
+        .table-text-sm {
+            font-size: 12px; 
+            color: #222;
         }
         /* Specific Message Highlighting */
         .alert-message {
-            color: #c82333; /* Distinct red for the custom message */
+            color: #cc0000; /* Distinct red for the custom message */
             font-weight: 600;
         }
-        
+        .col-header {
+            font-size: 11px;
+            color: #333;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 8px;
+        }
     </style>
 </head>
 <body class="p-4">
 
     <div class="max-w-7xl mx-auto bg-white main-container overflow-hidden">
-        <div class="log-header-bar">
-            Last 1000 Alert Log Entries
+        <div class="page-header">
+            Alert Log View Filter (LAN)
         </div>
         
-        <div class="overflow-x-auto">
-            <table class="alert-table">
-                <thead class="table-header">
-                    <tr>
-                        <th class="col-header">Date</th>
-                        <th class="col-header">Time</th>
-                        <th class="col-header">Pri</th>
-                        <th class="col-header">Proto</th>
-                        <th class="col-header">Class</th>
-                        <th class="col-header">Source IP</th>
-                        <th class="col-header">SPort</th>
-                        <th class="col-header">Destination IP</th>
-                        <th class="col-header">DPort</th>
-                        <th class="col-header">SID</th>
-                        <th class="col-header">Description</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    
-                    <!-- Custom ALERT ENTRY (FTP) -->
-                    <tr class="alert-row-custom">
-                        <td class="table-cell whitespace-nowrap">2025-10-02</td>
-                        <td class="table-cell whitespace-nowrap">19:41:30</td>
-                        <td class="table-cell whitespace-nowrap font-bold text-red-600">1</td>
-                        <td class="table-cell whitespace-nowrap">TCP</td>
-                        <td class="table-cell whitespace-nowrap">Custom Alert</td>
-                        <td class="table-cell whitespace-nowrap">
-                            192.168.1.100 <span class="action-icons">🔍+</span>
-                        </td>
-                        <td class="table-cell whitespace-nowrap">50123</td>
-                        <td class="table-cell whitespace-nowrap">
-                             192.168.1.1 <span class="action-icons">🔍+</span>
-                        </td>
-                        <td class="table-cell whitespace-nowrap">21</td>
-                        <td class="table-cell whitespace-nowrap">1:10000002</td>
-                        <td class="table-cell whitespace-nowrap alert-message">FTP Traffic Detected</td>
-                    </tr>
-                    
-                    <!-- Default Traffic/Background Alert 1 (Ping Reply) -->
-                    <tr class="alert-row-default">
-                        <td class="table-cell whitespace-nowrap text-gray-500">2025-10-02</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">19:41:15</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">3</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">ICMP</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">Connectivity Check</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">
-                            192.168.1.101 <span class="action-icons">🔍+</span>
-                        </td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">any</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">
-                             192.168.1.1 <span class="action-icons">🔍+</span>
-                        </td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">any</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">1:10000001</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">Ping Reply Detected</td>
-                    </tr>
-
-                    <!-- Default Traffic/Background Alert 2 (Random DNS) -->
-                    <tr class="alert-row-default">
-                        <td class="table-cell whitespace-nowrap text-gray-500">2025-10-02</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">19:41:00</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">4</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">UDP</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">DNS Access</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">
-                             192.168.1.100 <span class="action-icons">🔍+</span>
-                        </td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">53</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">
-                             8.8.8.8 <span class="action-icons">🔍+</span>
-                        </td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">53</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">1:200021</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">PROTOCOL-DNS Query</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
-        
-        <div class="p-4 mt-4 pt-3 border-t border-gray-300">
-            <h4 class="text-sm font-semibold text-gray-700">Alert Details</h4>
-            <p class="text-xs text-gray-500 mt-1">Select an entry for more details.</p>
+        <div class="p-4">
+            <h3 class="text-sm font-bold mb-3 border-b pb-1 text-[#333]">Last 1000 Alert Log Entries</h3>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="col-header text-left">Date</th>
+                            <th class="col-header text-left">Time</th>
+                            <th class="col-header text-left">Pri</th>
+                            <th class="col-header text-left">Proto</th>
+                            <th class="col-header text-left">Class</th>
+                            <th class="col-header text-left">Source IP</th>
+                            <th class="col-header text-left">Dest IP</th>
+                            <th class="col-header text-left">Message (Description)</th>
+                            <th class="col-header text-left">SID</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 text-sm">
+                        
+                        <tr class="alert-row-custom">
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">2025-10-02</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">19:40:05</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm font-bold text-red-600">1</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">ICMP</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">Custom Alert</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">192.168.1.100</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">192.168.1.1</td>
+                            <td class="px-4 py-2 whitespace-nowrap alert-message">Ping Message Detected</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">10000001</td>
+                        </tr>
+                        
+                        <tr class="alert-row-default">
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">2025-10-02</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">19:39:58</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">3</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">UDP</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">Attempted Access</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">10.0.2.15</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">208.67.222.222</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">PROTOCOL-DNS Request</td>
+                            <td class="px-4 py-2 whitespace-nowrap table-text-sm">1:200020</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-4 pt-3 border-t border-gray-300">
+                <h4 class="text-sm font-semibold text-gray-700">Alert Details</h4>
+                <p class="text-xs text-gray-500 mt-1">Select an entry for more details.</p>
+            </div>
         </div>
     </div>
 </body>
