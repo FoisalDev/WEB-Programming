@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snort Ping Alert Log</title>
+    <title>Snort FTP Alert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Base Styling to match classic UI */
         body {
             font-family: Arial, Helvetica, sans-serif; 
-            background-color: #f0f0f0; 
+            background-color: #f0f0f0; /* Light grey background */
         }
         .main-container {
             border: 1px solid #ccc;
-            box-shadow: none;
+            box-shadow: none; /* Removing drop shadow for cleaner look */
         }
-        /* Dark Header Bar for Log Entries - Exact Match */
+        /* Page Header - For 'Alert Log View Filter (LAN)' */
+        .page-header {
+            background-color: #e5e5e5;
+            color: #444;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-bottom: 1px solid #ccc;
+        }
+        /* Dark Header Bar for Log Entries - Matching the reference image */
         .log-header-bar {
-            background-color: #444; /* Darker header matching the reference */
+            background-color: #333; /* Dark background */
             color: white;
             font-size: 14px;
             font-weight: bold;
@@ -31,36 +40,35 @@
             width: 100%;
         }
         .table-header {
-            background-color: #f0f0f0; 
+            background-color: #f0f0f0; /* Lighter grey header background */
             border-top: none; 
             border-bottom: 1px solid #ddd;
         }
         /* Column Header Text Style - Adjusted for exact sizing/weight */
         .col-header {
-            font-size: 11px; /* Small font size for realism */
+            font-size: 12px; 
             font-weight: bold; 
             color: #333;
-            padding: 8px 6px; 
+            padding: 8px 10px; 
             text-align: left;
             text-transform: capitalize;
         }
         /* Table Cell Style */
         .table-cell {
-            padding: 6px 6px;
-            font-size: 11px; /* Small font size for realism */
+            padding: 6px 10px;
+            font-size: 12px;
             color: #222;
-            line-height: 1.2;
         }
         /* Alert Row Styles */
         .alert-row-custom {
-            background-color: #fffdee; /* Subtle alert background */
-            border-bottom: 1px solid #ddd; /* Thin row separator */
+            background-color: #f8d7da; /* Subtle danger red alert background */
+            border-bottom: 1px solid #eee;
         }
         .alert-row-default {
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
+            background-color: #ffffff; /* White background for default traffic */
+            border-bottom: 1px solid #eee;
         }
-        /* Action Icon Styles (Zoom/Plus/X) - Using symbols to match the look */
+        /* Action Icon Styles (Zoom/Plus/X) */
         .action-icons {
             display: inline-flex;
             gap: 4px;
@@ -69,32 +77,27 @@
             font-size: 14px;
             line-height: 1;
         }
-        /* Warning Icon (Yellow Triangle) */
-        .warning-icon {
-            color: #ffc107; /* Yellow color */
-            font-size: 14px;
-            font-weight: 900;
-        }
         /* Specific Message Highlighting */
         .alert-message {
-            color: #c82333; 
+            color: #c82333; /* Distinct red for the custom message */
             font-weight: 600;
         }
+        
     </style>
 </head>
 <body class="p-4">
 
     <div class="max-w-7xl mx-auto bg-white main-container overflow-hidden">
         <div class="log-header-bar">
-            2 Entries in Active Log
+            Last 1000 Alert Log Entries
         </div>
         
         <div class="overflow-x-auto">
             <table class="alert-table">
                 <thead class="table-header">
                     <tr>
-                        <th class="col-header">Date/Time</th>
-                        <th class="col-header">Action</th>
+                        <th class="col-header">Date</th>
+                        <th class="col-header">Time</th>
                         <th class="col-header">Pri</th>
                         <th class="col-header">Proto</th>
                         <th class="col-header">Class</th>
@@ -102,54 +105,77 @@
                         <th class="col-header">SPort</th>
                         <th class="col-header">Destination IP</th>
                         <th class="col-header">DPort</th>
-                        <th class="col-header">GID:SID</th>
+                        <th class="col-header">SID</th>
                         <th class="col-header">Description</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="divide-y divide-gray-200">
                     
-                    <!-- Custom ALERT ENTRY (PING) -->
+                    <!-- Custom ALERT ENTRY (FTP) -->
                     <tr class="alert-row-custom">
-                        <td class="table-cell whitespace-nowrap">2025-10-02<br>19:40:05</td>
-                        <td class="table-cell whitespace-nowrap"><span class="warning-icon">⚠</span></td>
-                        <td class="table-cell whitespace-nowrap">1</td>
-                        <td class="table-cell whitespace-nowrap">ICMP</td>
+                        <td class="table-cell whitespace-nowrap">2025-10-02</td>
+                        <td class="table-cell whitespace-nowrap">19:41:30</td>
+                        <td class="table-cell whitespace-nowrap font-bold text-red-600">1</td>
+                        <td class="table-cell whitespace-nowrap">TCP</td>
                         <td class="table-cell whitespace-nowrap">Custom Alert</td>
                         <td class="table-cell whitespace-nowrap">
                             192.168.1.100 <span class="action-icons">🔍+</span>
                         </td>
-                        <td class="table-cell whitespace-nowrap">any</td>
+                        <td class="table-cell whitespace-nowrap">50123</td>
                         <td class="table-cell whitespace-nowrap">
-                            192.168.1.1 <span class="action-icons">🔍+</span>
+                             192.168.1.1 <span class="action-icons">🔍+</span>
                         </td>
-                        <td class="table-cell whitespace-nowrap">any</td>
-                        <td class="table-cell whitespace-nowrap">1:10000001</td>
-                        <td class="table-cell whitespace-nowrap alert-message">Ping Message Detected</td>
+                        <td class="table-cell whitespace-nowrap">21</td>
+                        <td class="table-cell whitespace-nowrap">1:10000002</td>
+                        <td class="table-cell whitespace-nowrap alert-message">FTP Traffic Detected</td>
                     </tr>
                     
-                    <!-- Default Traffic/Background Alert (Non-Custom) -->
+                    <!-- Default Traffic/Background Alert 1 (Ping Reply) -->
                     <tr class="alert-row-default">
-                        <td class="table-cell whitespace-nowrap text-gray-500">2025-10-02<br>19:39:58</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500"><span class="warning-icon">⚠</span></td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">2025-10-02</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">19:41:15</td>
                         <td class="table-cell whitespace-nowrap text-gray-500">3</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">ICMP</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">Connectivity Check</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">
+                            192.168.1.101 <span class="action-icons">🔍+</span>
+                        </td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">any</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">
+                             192.168.1.1 <span class="action-icons">🔍+</span>
+                        </td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">any</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">1:10000001</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">Ping Reply Detected</td>
+                    </tr>
+
+                    <!-- Default Traffic/Background Alert 2 (Random DNS) -->
+                    <tr class="alert-row-default">
+                        <td class="table-cell whitespace-nowrap text-gray-500">2025-10-02</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">19:41:00</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">4</td>
                         <td class="table-cell whitespace-nowrap text-gray-500">UDP</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">Potentially Bad Traffic</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">DNS Access</td>
                         <td class="table-cell whitespace-nowrap text-gray-500">
-                            10.0.2.15 <span class="action-icons">🔍+</span>
+                             192.168.1.100 <span class="action-icons">🔍+</span>
                         </td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">5353</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">53</td>
                         <td class="table-cell whitespace-nowrap text-gray-500">
-                             224.0.0.251 <span class="action-icons">🔍+</span>
+                             8.8.8.8 <span class="action-icons">🔍+</span>
                         </td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">5353</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">1:200020</td>
-                        <td class="table-cell whitespace-nowrap text-gray-500">PROTOCOL-MDNS Request</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">53</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">1:200021</td>
+                        <td class="table-cell whitespace-nowrap text-gray-500">PROTOCOL-DNS Query</td>
                     </tr>
                     
                 </tbody>
             </table>
         </div>
         
+        <div class="p-4 mt-4 pt-3 border-t border-gray-300">
+            <h4 class="text-sm font-semibold text-gray-700">Alert Details</h4>
+            <p class="text-xs text-gray-500 mt-1">Select an entry for more details.</p>
+        </div>
     </div>
 </body>
 </html>
